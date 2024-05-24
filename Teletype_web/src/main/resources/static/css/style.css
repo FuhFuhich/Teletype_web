@@ -1,0 +1,54 @@
+/* Split the screen in half */
+.split {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    width: 25.05%;
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    background-color: #78A083;
+    /* Add this to modify the scrollbar */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+    }
+}
+
+.left-top {
+    width: 100%;
+    height: 7%;
+    top: 0;
+    background-color: #78A083;
+    position: absolute;
+}
+
+.left-down {
+    width: 100%;
+    height: 93%;
+    top: 7%;
+    background-color: #78A083;
+    position: absolute;
+}
+
+.right {
+    width: 74.95%;
+    height: 100%;
+    right: 0;
+    background-color: #78A083;
+}
