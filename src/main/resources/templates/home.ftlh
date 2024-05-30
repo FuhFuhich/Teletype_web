@@ -7,19 +7,9 @@
 </head>
 <body>
 <div class="split left">
-    <div class="content">
+    <div class="content buttons-container">
         <#list items as item>
-            <div class="item-box">
-                <div class="top-left-corner">
-                    <p>${item}</p>
-                </div>
-                <div class="below-top-left">
-                    <p>${item}</p>
-                </div>
-                <div class="bottom-right-corner">
-                    <p>${item}</p>
-                </div>
-            </div>
+            <a href="#" class="button-chat">${item}</a>
         </#list>
     </div>
 </div>
@@ -29,7 +19,7 @@
 </body>
 </html>
 
-<#macro layout title heading text items>
+<#macro layout title heading text items buttonText>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -39,19 +29,9 @@
     </head>
     <body>
     <div class="split left">
-        <div class="content">
+        <div class="content buttons-container">
             <#list items as item>
-                <div class="item-box">
-                    <div class="top-left-corner">
-                        <p>${item}</p>
-                    </div>
-                    <div class="below-top-left">
-                        <p>${item}</p>
-                    </div>
-                    <div class="bottom-right-corner">
-                        <p>${item}</p>
-                    </div>
-                </div>
+                <a href="#" class="button-chat">${item}</a>
             </#list>
         </div>
     </div>
@@ -62,4 +42,4 @@
     </html>
 </#macro>
 
-<@layout title="Home" heading="My Heading" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." items=["Item 1", "Item 2", "Item 3"]/>
+<@layout title="Home" heading="My Heading" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." items=["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 5", "Item 6", "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"] buttonText="Кнопка"/>
