@@ -42,13 +42,16 @@
     border-radius: 10px;
     width: 85%;
     flex-shrink: 0;
-    height: 60px; /* Увеличена высота для размещения изображения */
+    height: 50px; /* Увеличена высота для размещения изображения */
     position: relative;
 }
 
 .button-photo {
-    width: 40px; /* Ширина изображения */
-    height: 40px; /* Высота изображения */
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    width: 50px; /* Ширина изображения */
+    height: 50px; /* Высота изображения */
     border-radius: 50%; /* Круглое изображение */
     margin-right: 10px; /* Отступ справа от изображения */
 }
@@ -64,15 +67,27 @@
 }
 
 .button-text.top-text {
+    position: absolute;
+    top: 20%;
+    right: -35%;
+    transform: translate(50%, -50%);
     font-size: 12px;
 }
 
 .button-text.middle-text {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
     font-size: 16px;
     font-weight: bold;
 }
 
 .button-text.bottom-text {
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translate(50%, -50%);
     font-size: 12px;
 }
 
