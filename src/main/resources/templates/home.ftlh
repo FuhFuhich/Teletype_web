@@ -10,9 +10,12 @@
     <div class="content buttons-container">
         <#list items as item>
             <a href="#" class="button-chat">
-                <div class="button-text top-text">Top Text</div>
-                <div class="button-text middle-text">${item}</div>
-                <div class="button-text bottom-text">Bottom Text</div>
+                <img src="path/to/photo.jpg" alt="Photo" class="button-photo">
+                <div class="button-text-container">
+                    <div class="button-text top-text">Top Text</div>
+                    <div class="button-text middle-text">${item}</div>
+                    <div class="button-text bottom-text">Bottom Text</div>
+                </div>
             </a>
         </#list>
     </div>
@@ -36,9 +39,12 @@
         <div class="content buttons-container">
             <#list items as item>
                 <a href="#" class="button-chat">
-                    <div class="button-text top-text">Top Text</div>
-                    <div class="button-text middle-text">${item}</div>
-                    <div class="button-text bottom-text">Bottom Text</div>
+                    <img src="../images/Frieren.jpg" alt="Photo" class="button-photo">
+                    <div class="button-text-container">
+                        <div class="button-text top-text">Top Text</div>
+                        <div class="button-text middle-text">${item}</div>
+                        <div class="button-text bottom-text">Bottom Text</div>
+                    </div>
                 </a>
             </#list>
         </div>

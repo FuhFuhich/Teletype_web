@@ -35,16 +35,28 @@
     padding: .7em 1.5em;
     outline: none;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
     transition: background 0.05s, border-radius 0.05s;
     border-radius: 10px;
     width: 85%;
     flex-shrink: 0;
-    height: 40px;
+    height: 60px; /* Увеличена высота для размещения изображения */
     position: relative;
+}
+
+.button-photo {
+    width: 40px; /* Ширина изображения */
+    height: 40px; /* Высота изображения */
+    border-radius: 50%; /* Круглое изображение */
+    margin-right: 10px; /* Отступ справа от изображения */
+}
+
+.button-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .button-text {
@@ -52,24 +64,16 @@
 }
 
 .button-text.top-text {
-    position: absolute;
-    top: 80%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+    font-size: 12px;
 }
 
 .button-text.middle-text {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .button-text.bottom-text {
-    position: absolute;
-    top: 20%;
-    right: 15%;
-    transform: translate(50%, -50%);
+    font-size: 12px;
 }
 
 .button-chat:hover {
