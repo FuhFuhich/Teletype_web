@@ -9,7 +9,7 @@
 
 /* Left panel */
 .left {
-    width: 20%;
+    width: 25%;
     height: 100%;
     left: 0;
     overflow-y: auto;
@@ -28,35 +28,61 @@
 }
 
 .button-chat {
-    color: #fff; /* цвет текста */
-    text-decoration: none; /* убирать подчёркивание у ссылок */
-    user-select: none; /* убирать выделение текста */
-    background: transparent; /* прозрачный фон кнопки */
-    padding: .7em 1.5em; /* отступ от текста */
-    outline: none; /* убирать контур в Mozilla */
-    display: inline-block; /* чтобы padding работал */
-    text-align: center; /* чтобы текст был по центру */
-    transition: background 0.05s, border-radius 0.05s; /* плавная смена фона и закругленных углов при наведении и нажатии */
-    border-radius: 10px; /* закругленные углы при наведении */
-    width: 85%; /* начальная ширина кнопки */
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: transparent;
+    padding: .7em 1.5em;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: background 0.05s, border-radius 0.05s;
+    border-radius: 10px;
+    width: 85%;
     flex-shrink: 0;
+    height: 40px;
+    position: relative;
+}
+
+.button-text {
+    width: 100%;
+}
+
+.button-text.top-text {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.button-text.middle-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.button-text.bottom-text {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    transform: translate(50%, -50%);
 }
 
 .button-chat:hover {
-    background: rgb(112, 160, 131); /* при наведении курсора мышки */
-    border-radius: 10px; /* закругленные углы при наведении */
-    width: 85%; /* начальная ширина кнопки */
+    background: rgb(52, 82, 85);
 }
 
 .button-chat:active {
-    background: rgb(152,15,0); /* при нажатии */
-    border-radius: 10px; /* закругленные углы при наведении */
-    width: 85%; /* начальная ширина кнопки */
+    background: rgb(112, 160, 131);
 }
 
 /* Right panel */
 .right {
-    width: 80%;
+    width: 75%;
     height: 100%;
     right: 0;
     background-color: #78A083;

@@ -9,7 +9,11 @@
 <div class="split left">
     <div class="content buttons-container">
         <#list items as item>
-            <a href="#" class="button-chat">${item}</a>
+            <a href="#" class="button-chat">
+                <div class="button-text top-text">Top Text</div>
+                <div class="button-text middle-text">${item}</div>
+                <div class="button-text bottom-text">Bottom Text</div>
+            </a>
         </#list>
     </div>
 </div>
@@ -31,7 +35,11 @@
     <div class="split left">
         <div class="content buttons-container">
             <#list items as item>
-                <a href="#" class="button-chat">${item}</a>
+                <a href="#" class="button-chat">
+                    <div class="button-text top-text">Top Text</div>
+                    <div class="button-text middle-text">${item}</div>
+                    <div class="button-text bottom-text">Bottom Text</div>
+                </a>
             </#list>
         </div>
     </div>
