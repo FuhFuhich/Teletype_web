@@ -10,18 +10,32 @@
     <div class="content buttons-container">
         <#list items as item>
             <a href="#" class="button-chat">
-                <img src="path/to/photo.jpg" alt="Photo" class="button-photo">
+                <img src="../images/Frieren.jpg" alt="Photo" class="button-photo">
                 <div class="button-text-container">
-                    <div class="button-text top-text">Top Text</div>
-                    <div class="button-text middle-text">${item}</div>
-                    <div class="button-text bottom-text">Bottom Text</div>
+                    <div class="button-text time-msg">Top Text</div>
+                    <div class="button-text nickname">${item}</div>
+                    <div class="button-text last-msg">Bottom Text</div>
                 </div>
             </a>
         </#list>
     </div>
 </div>
 <div class="split right">
-    <!-- Right content here -->
+    <div class="right-top-panel">
+        <!-- Контент верхней панели справа -->
+    </div>
+    <div class="content buttons-container">
+        <#list items as item>
+            <a href="#" class="button-chat">
+                <img src="../images/Frieren.jpg" alt="Photo" class="button-photo">
+                <div class="button-text-container">
+                    <div class="button-text time-msg">Top Text</div>
+                    <div class="button-text nickname">${item}</div>
+                    <div class="button-text last-msg">Bottom Text</div>
+                </div>
+            </a>
+        </#list>
+    </div>
 </div>
 </body>
 </html>
@@ -41,16 +55,30 @@
                 <a href="#" class="button-chat">
                     <img src="../images/Frieren.jpg" alt="Photo" class="button-photo">
                     <div class="button-text-container">
-                        <div class="button-text top-text">Top Text</div>
-                        <div class="button-text middle-text">${item}</div>
-                        <div class="button-text bottom-text">Bottom Text</div>
+                        <div class="button-text time-msg">Top Text</div>
+                        <div class="button-text nickname">${item}</div>
+                        <div class="button-text last-msg">Bottom Text</div>
                     </div>
                 </a>
             </#list>
         </div>
     </div>
     <div class="split right">
-        <!-- Right content here -->
+        <div class="right-top-panel">
+            <!-- Контент верхней панели справа -->
+        </div>
+        <div class="content buttons-container">
+            <#list items as item>
+                <a href="#" class="button-chat">
+                    <img src="../images/Frieren.jpg" alt="Photo" class="button-photo">
+                    <div class="button-text-container">
+                        <div class="button-text time-msg">Top Text</div>
+                        <div class="button-text nickname">${item}</div>
+                        <div class="button-text last-msg">Bottom Text</div>
+                    </div>
+                </a>
+            </#list>
+        </div>
     </div>
     </body>
     </html>

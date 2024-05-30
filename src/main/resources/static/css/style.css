@@ -7,6 +7,8 @@
     overflow-x: hidden;
 }
 
+/* ----------------------------------LEFT PANEL---------------------------------- */
+
 /* Left panel */
 .left {
     width: 25%;
@@ -66,38 +68,44 @@
     width: 100%;
 }
 
-.button-text.top-text {
+.button-text.time-msg {
     position: absolute;
-    top: 20%;
+    top: 25%;
     right: -35%;
     transform: translate(50%, -50%);
     font-size: 14px;
 }
 
-.button-text.middle-text {
+.button-text.nickname {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 70%;
     transform: translate(-50%, -50%);
     font-size: 18px;
     font-weight: bold;
 }
 
-.button-text.bottom-text {
+.button-text.last-msg {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: -30%;
     transform: translate(50%, -50%);
     font-size: 14px;
 }
 
+/* Подсвечивание */
 .button-chat:hover {
     background: rgb(52, 82, 85);
 }
 
+/* При нажатии подсвечивание */
 .button-chat:active {
     background: rgb(112, 160, 131);
 }
+
+/* ----------------------------------LEFT PANEL---------------------------------- */
+
+/* ----------------------------------RIGHT PANEL---------------------------------- */
 
 /* Right panel */
 .right {
@@ -107,15 +115,74 @@
     background-color: #78A083;
     position: fixed;
     top: 0;
+    overflow-y: auto;
 }
 
+.right .right-top-panel {
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.right .content {
+    margin-top: 10%; /* Отступ для нижней панели */
+    padding: 0;
+}
+
+.buttons-container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.buttons-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.button-me {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: transparent;
+    padding: .7em 1.5em;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    transition: background 0.05s, border-radius 0.05s;
+    border-radius: 10px;
+    width: 85%;
+    flex-shrink: 0;
+    height: 50px; /* Увеличена высота для размещения изображения */
+    position: relative;
+}
+
+/* ----------------------------------RIGHT PANEL---------------------------------- */
+
 /* Scrollbar styles */
+.right::-webkit-scrollbar,
 .left::-webkit-scrollbar {
     width: 6px;
 }
 
+.right::-webkit-scrollbar-track,
 .left::-webkit-scrollbar-track {
     background: transparent;
+}
+
+.right::-webkit-scrollbar-thumb {
+    background-color: #345255;
+    border-radius: 6px;
+    border: 3px solid transparent;
+    background-clip: content-box;
 }
 
 .left::-webkit-scrollbar-thumb {
@@ -125,6 +192,7 @@
     background-clip: content-box;
 }
 
+.right::-webkit-scrollbar-thumb:hover,
 .left::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
