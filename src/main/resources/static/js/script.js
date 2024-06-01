@@ -11,7 +11,7 @@ document.getElementById('message-form').addEventListener('submit', function(even
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ content: message })
+        body: JSON.stringify({ sender: "Me", content: message })
     })
         .then(response => response.json())
         .then(data => {
@@ -19,9 +19,11 @@ document.getElementById('message-form').addEventListener('submit', function(even
             const messagesContainer = document.getElementById('messages-container');
             const newMessage = document.createElement('div');
             newMessage.classList.add('message');
-            newMessage.innerHTML = `<div class="message-sender">Me</div><div class="message-content">${data.content}</div>`;
+            newMessage.innerHTML = `<div class="message-sender">${data.sender}</div><div class="message-content">${data.content}</div>`;
             messagesContainer.appendChild(newMessage);
             input.value = '';
+            // Скролл к последнему сообщению
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
         });
 });
 
@@ -43,3 +45,9 @@ function getMessages() {
 
 // Периодическое обновление сообщений
 setInterval(getMessages, 3000);
+
+// Скролл к последнему сообщению при загрузке страницы
+window.onload = function() {
+    const messagesContainer = document.getElementById('messages-container');
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+};
