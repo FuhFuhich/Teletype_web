@@ -172,6 +172,21 @@
     margin-top: 5px;
 }
 
+/* Styles for messages from other users */
+.message-other {
+    text-align: left;
+    background: #e0e0e0;
+    margin-right: auto;
+}
+
+/* Styles for messages from the current user */
+.message-me {
+    text-align: right;
+    background: #78A083;
+    margin-left: auto;
+    color: white;
+}
+
 /* Scrollbar styles */
 .right::-webkit-scrollbar,
 .left::-webkit-scrollbar {

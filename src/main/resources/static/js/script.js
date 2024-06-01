@@ -18,7 +18,7 @@ document.getElementById('message-form').addEventListener('submit', function(even
             // Обновление списка сообщений
             const messagesContainer = document.getElementById('messages-container');
             const newMessage = document.createElement('div');
-            newMessage.classList.add('message');
+            newMessage.classList.add('message', 'message-me');
             newMessage.innerHTML = `<div class="message-sender">${data.sender}</div><div class="message-content">${data.content}</div>`;
             messagesContainer.appendChild(newMessage);
             input.value = '';
@@ -37,9 +37,16 @@ function getMessages() {
             data.forEach(message => {
                 const messageElement = document.createElement('div');
                 messageElement.classList.add('message');
+                if (message.sender === 'Me') {
+                    messageElement.classList.add('message-me');
+                } else {
+                    messageElement.classList.add('message-other');
+                }
                 messageElement.innerHTML = `<div class="message-sender">${message.sender}</div><div class="message-content">${message.content}</div>`;
                 messagesContainer.appendChild(messageElement);
             });
+            // Скролл к последнему сообщению
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
         });
 }
 

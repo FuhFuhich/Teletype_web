@@ -11,23 +11,16 @@ import java.util.List;
 @Controller
 public class MainController {
     List<String> items = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
-    List<Message> messages = new ArrayList<>(Arrays.asList(
-            new Message("User 1", "Hello!"),
-            new Message("User 2", "Hi there!"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?"),
-            new Message("User 3", "How are you?")
-    ));
+    List<Message> messages = new ArrayList<>();
 
     @GetMapping("/")
     public String home(Model model) {
+        // Пример сообщений
+        messages.add(new Message("User 1", "Hello!"));
+        messages.add(new Message("Me", "Hi there!"));
+        messages.add(new Message("User 2", "How are you?"));
+        messages.add(new Message("Me", "I'm good, thanks! How about you?"));
+
         model.addAttribute("items", items);
         model.addAttribute("selectedUser", "User 1");
         model.addAttribute("messages", messages);
