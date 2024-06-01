@@ -195,3 +195,48 @@
 .left::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
+
+/* Styles for the message input section */
+.message-input {
+    position: fixed;
+    bottom: 0;
+    width: 75%;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-input input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #78A083;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for messages */
+.message {
+    background: #e0e0e0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message-sender {
+    font-weight: bold;
+}
+
+.message-content {
+    margin-top: 5px;
+}
