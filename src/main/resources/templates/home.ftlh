@@ -95,7 +95,7 @@
     <div class="message-input">
         <form id="message-form" class="form-container">
             <label for="message-input"></label><input type="text" id="message-input" placeholder="Type a message..." class="login-submit" required>
-            <button type="submit" class="login-submit">Send</button>
+            <button type="submit" class="send-button after"></button>
         </form>
     </div>
     <script src="../js/script.js"></script>
