@@ -77,7 +77,14 @@
     <div class="split right">
         <div class="content buttons-container-right" id="messages-container">
             <#list messages as message>
-                <div class="message">
+                <div class="message message-other">
+                    <div class="message-sender">${message.sender}</div>
+                    <div class="message-content">${message.content}</div>
+                    <div class="message-time">${message.sender}</div>
+                </div>
+            </#list>
+            <#list messages as message>
+                <div class="message message-me">
                     <div class="message-sender">${message.sender}</div>
                     <div class="message-content">${message.content}</div>
                     <div class="message-time">${message.sender}</div>
@@ -86,9 +93,9 @@
         </div>
     </div>
     <div class="message-input">
-        <form id="message-form">
-            <input type="text" id="message-input" placeholder="Type a message..." required>
-            <button type="submit">Send</button>
+        <form id="message-form" class="form-container">
+            <label for="message-input"></label><input type="text" id="message-input" placeholder="Type a message..." class="login-submit" required>
+            <button type="submit" class="login-submit">Send</button>
         </form>
     </div>
     <script src="../js/script.js"></script>

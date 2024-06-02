@@ -12,9 +12,9 @@
 /* Left panel */
 .left {
     width: 25%;
-    height: 95%;
+    height: 93%;
     left: 0;
-    top: 5%;
+    top: 7%;
     overflow-y: auto;
     background-color: #344955;
 }
@@ -25,7 +25,7 @@
 
 .left-settings-panel {
     width: 25%;
-    height: 5%;
+    height: 7%;
     left: 0;
     top: 0;
     background-color: green;
@@ -119,29 +119,42 @@
 
 /* ----------------------------------RIGHT PANEL---------------------------------- */
 
-/* Right panel */
-.right {
+.right-white-list {
     width: 75%;
-    height: 90%;
+    height: 100%;
     right: 0;
     background-color: #78A083;
     position: fixed;
-    top: 5%;
+    top: 0;
+    overflow-y: auto;
+}
+
+/* Right panel */
+.right {
+    width: 75%;
+    height: 93%;
+    right: 0;
+    background-color: #78A083;
+    position: fixed;
+    top: 7%;
     overflow-y: auto;
 }
 
 .right-top-panel {
     width: 75%;
-    height: 5%;
+    height: 7%;
     right: 0;
     background-color: #fff;
-    position: fixed;
+    position: absolute;
     top: 0;
-    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .right .content {
-    padding: 10px 0 10px 0; /* Отступ сверху для учета фиксированного заголовка */
+    /* сверху и снизу. Снизу отступ такой из-за ввода сообщения */
+    padding: 1% 0 9% 0;
 }
 
 .buttons-container-right {
@@ -151,18 +164,39 @@
     padding: 0;
 }
 
+/* Форма сообщения */
 .message-input {
     position: fixed;
     bottom: 0;
     width: 75%;
-    height: 5%;
+    height: 7%;
     right: 0;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
 }
 
+/* Кастомизация кнопки отправки формы */
+.login-submit {
+    text-decoration: none;
+    text-align: center;
+    padding: 11px 92px;
+    border: none;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font: 20px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    background: #eb8321;
+    -webkit-box-shadow: inset 0px 0px 1px #ffffff;
+    -moz-box-shadow: inset 0px 0px 1px #ffffff;
+    box-shadow: inset 0px 0px 1px #ffffff;
+    opacity: 0.95;
+}
+
+/* Ограничение отправки сообщений и текстового поля */
 .message-input input {
     width: 80%;
     padding: 10px;
@@ -171,6 +205,8 @@
     border-radius: 5px;
 }
 
+/* В душе не ебу нах нужна форма, но все ломается без нее */
+/* Какого-то хуя это кастомизация */
 .message-input button {
     padding: 10px 20px;
     border: none;
@@ -180,7 +216,16 @@
     cursor: pointer;
 }
 
-/* Styles for messages */
+/* Для последовательного размещения ввода текста и кнопки */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: transparent;
+}
+
+/* Стиль для сообщений */
 .message {
     height: 80%;
     background: #e0e0e0;
@@ -193,12 +238,14 @@
     width: 35%; /* Увеличена ширина для лучшего отображения */
 }
 
+/* Текст отправителя */
 .message-sender {
     font-weight: bold;
     display: block;
     left: 0;
 }
 
+/* Текст для текста сообщения */
 .message-content {
     margin-top: 5px;
     display: block;
@@ -206,34 +253,44 @@
     word-break: break-all;
 }
 
+/* Текст для отправки сообщений */
 .message-time {
     font-size: 12px;
     font-weight: bold;
     display: block;
+}
+
+/* Время сообщений в левом нижнем углу */
+.message-me .message-time {
+    text-align: left;
+}
+
+/* Время сообщений в правом нижнем углу */
+.message-other .message-time {
     text-align: right;
 }
 
 
-/* Styles for messages from other users */
+/* Стиль сообщения для других юзеров */
 .message-other {
     text-align: left;
     left: 0;
-    margin-left: 20%;
+    margin-right: 25%;
     background: #e0e0e0;
     width: 35%;
 }
 
-/* Styles for messages from the current user */
+/* Стиль сообщения для себя */
 .message-me {
     text-align: right;
     right: 0;
-    background: #78A083;
-    color: blue;
+    margin-left: 25%;
+    background: blue;
     width: 35%;
 }
 
 
-/* Scrollbar styles */
+/* Стиль скроллбара */
 .right::-webkit-scrollbar,
 .left::-webkit-scrollbar {
     width: 6px;
