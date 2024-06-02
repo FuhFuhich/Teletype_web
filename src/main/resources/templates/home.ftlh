@@ -57,6 +57,10 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+    <div class="left-settings-panel">
+        <button class="left-settings-button">Settings</button>
+        <input type="text" class="left-settings-founder" placeholder="Enter text here">
+    </div>
     <div class="split left">
         <div class="content buttons-container">
             <#list items as item>
@@ -95,7 +99,7 @@
     <div class="message-input">
         <form id="message-form" class="form-container">
             <label for="message-input"></label><input type="text" id="message-input" placeholder="Type a message..." class="login-submit" required>
-            <button type="submit" class="send-button after"></button>
+            <button type="submit" class="login-submit">Send</button>
         </form>
     </div>
     <script src="../js/script.js"></script>
