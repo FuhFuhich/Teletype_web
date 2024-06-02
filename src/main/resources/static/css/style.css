@@ -12,14 +12,25 @@
 /* Left panel */
 .left {
     width: 25%;
-    height: 100%;
+    height: 95%;
     left: 0;
+    top: 5%;
     overflow-y: auto;
     background-color: #344955;
 }
 
 .left .content {
     padding: 0;
+}
+
+.left-settings-panel {
+    width: 25%;
+    height: 5%;
+    left: 0;
+    top: 0;
+    background-color: green;
+    position: fixed;
+    z-index: 1;
 }
 
 .buttons-container {
@@ -44,7 +55,7 @@
     border-radius: 10px;
     width: 85%;
     flex-shrink: 0;
-    height: 70px; /* Увеличена высота для размещения изображения */
+    height: 50px; /* Увеличена высота для размещения изображения */
     position: relative;
 }
 
@@ -70,15 +81,27 @@
 }
 
 .button-text.time-msg {
-    font-size: 14px;
+    position: absolute;
+    top: 25%;
+    right: -35%;
+    transform: translate(50%, -50%);
+    font-size: 12px;
 }
 
 .button-text.nickname {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(-50%, -50%);
     font-size: 18px;
     font-weight: bold;
 }
 
 .button-text.last-msg {
+    position: absolute;
+    top: 55%;
+    left: -30%;
+    transform: translate(50%, -50%);
     font-size: 14px;
 }
 
@@ -99,17 +122,18 @@
 /* Right panel */
 .right {
     width: 75%;
-    height: 100%;
+    height: 90%;
     right: 0;
     background-color: #78A083;
     position: fixed;
-    top: 0;
+    top: 5%;
     overflow-y: auto;
 }
 
-.right .right-top-panel {
-    width: 100%;
-    height: 10%;
+.right-top-panel {
+    width: 75%;
+    height: 5%;
+    right: 0;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -117,7 +141,7 @@
 }
 
 .right .content {
-    padding: 60px 0 70px 0; /* Отступ сверху для учета фиксированного заголовка */
+    padding: 10px 0 10px 0; /* Отступ сверху для учета фиксированного заголовка */
 }
 
 .buttons-container-right {
@@ -131,8 +155,9 @@
     position: fixed;
     bottom: 0;
     width: 75%;
+    height: 5%;
+    right: 0;
     background-color: #fff;
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,35 +182,56 @@
 
 /* Styles for messages */
 .message {
+    height: 80%;
     background: #e0e0e0;
-    margin: 10px;
+    top: 0;
+    margin: 3px;
+    left: 20%;
+    right: 20%;
     padding: 10px;
     border-radius: 10px;
-    width: 90%; /* Увеличена ширина для лучшего отображения */
+    width: 35%; /* Увеличена ширина для лучшего отображения */
 }
 
 .message-sender {
     font-weight: bold;
+    display: block;
+    left: 0;
 }
 
 .message-content {
     margin-top: 5px;
+    display: block;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
+
+.message-time {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+}
+
 
 /* Styles for messages from other users */
 .message-other {
     text-align: left;
+    left: 0;
+    margin-left: 20%;
     background: #e0e0e0;
-    margin-right: auto;
+    width: 35%;
 }
 
 /* Styles for messages from the current user */
 .message-me {
     text-align: right;
+    right: 0;
     background: #78A083;
-    margin-left: auto;
-    color: white;
+    color: blue;
+    width: 35%;
 }
+
 
 /* Scrollbar styles */
 .right::-webkit-scrollbar,

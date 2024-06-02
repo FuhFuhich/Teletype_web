@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<div class="left-settings-panel">
+    <!--   Content   -->
+</div>
 <div class="split left">
     <div class="content buttons-container">
         <#list items as item>
@@ -26,7 +29,7 @@
 <div class="split right">
     <div class="content buttons-container-right" id="messages-container">
         <#list messages as message>
-            <div class="message">
+            <div class="message-me">
                 <div class="message-sender">${message.sender}</div>
                 <div class="message-content">${message.content}</div>
             </div>
@@ -68,24 +71,25 @@
             </#list>
         </div>
     </div>
+    <div class="right-top-panel">
+        <h2>Chat with ${selectedUser}</h2>
+    </div>
     <div class="split right">
-        <div class="right-top-panel">
-            <h2>Chat with ${selectedUser}</h2>
-        </div>
         <div class="content buttons-container-right" id="messages-container">
             <#list messages as message>
                 <div class="message">
                     <div class="message-sender">${message.sender}</div>
                     <div class="message-content">${message.content}</div>
+                    <div class="message-time">${message.sender}</div>
                 </div>
             </#list>
         </div>
-        <div class="message-input">
-            <form id="message-form">
-                <input type="text" id="message-input" placeholder="Type a message..." required>
-                <button type="submit">Send</button>
-            </form>
-        </div>
+    </div>
+    <div class="message-input">
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type a message..." required>
+            <button type="submit">Send</button>
+        </form>
     </div>
     <script src="../js/script.js"></script>
     </body>

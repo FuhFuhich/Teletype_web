@@ -16,7 +16,7 @@ public class MainController {
     @GetMapping("/")
     public String home(Model model) {
         // Пример сообщений
-        messages.add(new Message("User 1", "Hello!"));
+        messages.add(new Message("User 1", "Heрпщкшгурпщкцшг    кцщйшгруцпщшгукрпщшгукцрпщшгукрпукцщшгрпукщшгпрушщпгрйкцщшгрйкщшгпрукцщшгпрукцпщшгукрмщушгкрпйкцшгрйпщшгукрпщцшрщрщшгрllo!"));
         messages.add(new Message("Me", "Hi there!"));
         messages.add(new Message("User 2", "How are you?"));
         messages.add(new Message("Me", "I'm good, thanks! How about you?"));
