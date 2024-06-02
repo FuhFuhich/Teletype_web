@@ -20,10 +20,10 @@
         </#list>
     </div>
 </div>
+<div class="right-top-panel">
+    <h2>Chat with ${selectedUser}</h2>
+</div>
 <div class="split right">
-    <div class="right-top-panel">
-        <h2>Chat with ${selectedUser}</h2>
-    </div>
     <div class="content buttons-container-right" id="messages-container">
         <#list messages as message>
             <div class="message">
@@ -32,12 +32,12 @@
             </div>
         </#list>
     </div>
-    <div class="message-input">
-        <form id="message-form">
-            <input type="text" id="message-input" placeholder="Type a message..." required>
-            <button type="submit">Send</button>
-        </form>
-    </div>
+</div>
+<div class="message-input">
+    <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type a message..." required>
+        <button type="submit">Send</button>
+    </form>
 </div>
 <script src="../js/script.js"></script>
 </body>
